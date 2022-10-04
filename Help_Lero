@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+void main()
+{
+    double a, b, c;  /* стороны треугольника а, b, с */
+    double p;  /* полупериметр треугольника */	
+    double r; /* радиус круга, вписанного в треугольник */
+
+   /* Включение кириллицы в консоли */ 
+    setlocale(LC_ALL, "russian");
+
+   /* Ввод a, b, c */ 
+    printf("Введите a= ");
+    scanf("%lf",&a);
+    printf("Введите b= ");
+    scanf("%lf",&b);
+    printf("Введите c= ");
+    scanf("%lf",&c);
+
+   /* Контрольный вывод a, b, c */ 
+    printf("a= %6.2lf\n",a);
+    printf("b= %6.2lf\n",b);
+    printf("c= %6.2lf\n",c);
+
+   /* Вычисление p */ 
+    p = (a+b+c)/2;
+
+   /* Вывод полупериметра */ 
+    printf("p= %6.2lf\n", p);
+    
+   /* Вычисление r */
+    r = sqrt((p-a)*(p-b)*(p-c))/p;
+    
+   /* Вывод радиуса */ 
+    printf("r= %6.2lf\n", r);
+    
+    getchar();getchar();
+}
